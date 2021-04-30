@@ -1,9 +1,49 @@
 const formUrl = document.getElementById('urlForm');
 const inputUrl = document.getElementById('longUrl');
+const customId = document.getElementById('shortId');
 const urlList = document.getElementById('url-list');
 
 const serverUrl = 'http://localhost:5000/api/v1/shortUrl';
 
+// Helper function to add a URL item to the results
+const addUrltoList = (baseUrl, longUrl, shortUrl) => {
+  let li = document.createElement('li');
+  let shortUrlLink = document.createElement('a');
+  let longUrlLink = document.createElement('a');
+  let div1 = document.createElement('div');
+  let div2 = document.createElement('div');
+
+  shortUrlLink.innerText = `${baseUrl}/${shortUrl}`;
+  longUrlLink.innerText = longUrl;
+  shortUrlLink.href = longUrl;
+  longUrlLink.href = longUrl;
+  shortUrlLink.target = '_blank';
+  longUrlLink.target = '_blank';
+
+  li.classList.add('url-list-item');
+
+  div1.append(longUrlLink);
+  div2.append(shortUrlLink);
+
+  li.append(div1);
+  li.append(div2);
+
+  urlList.append(li);
+};
+
+// Edit input URL as https
+const editUrl = (inputUrl) => {
+  inputUrl =
+    inputUrl.startsWith('https') === true
+      ? inputUrl
+      : inputUrl.startsWith('www') === true
+      ? `https://${inputUrl.slice(4)}`
+      : `https://${inputUrl}`;
+
+  return inputUrl;
+};
+
+// To fetch all the URLs entered by the user before by making a GET request to the API
 const fetchAllShortUrls = async () => {
   const response = await fetch(serverUrl);
 
@@ -11,61 +51,42 @@ const fetchAllShortUrls = async () => {
 
   const urls = data.data;
 
-  if (urls.length === 0) {
-    urlList.innerText = 'No URLS yet';
-  } else {
-    urlList.innerText = '';
-    urls.forEach((url) => {
-      let urlItem = document.createElement('li');
-      let atag = document.createElement('a');
+  urlList.innerText = urls.length === 0 ? 'No URLS yet' : '';
 
-      url.longUrl =
-        url.longUrl.startsWith('https') === true
-          ? url.longUrl
-          : url.longUrl.startsWith('www') === true
-          ? `https://${url.longUrl.slice(4)}`
-          : `https://${url.longUrl}`;
-
-      atag.innerText = `https://webarch/${url.shortUrl}`;
-      atag.href = url.longUrl;
-
-      urlItem.append(atag);
-
-      urlList.append(urlItem);
-    });
-  }
+  urls.forEach((url) => {
+    url.longUrl = editUrl(url.longUrl);
+    addUrltoList(serverUrl, url.longUrl, url.shortUrl);
+  });
 };
+
+// To convert a long URL to a short URL by making a POST request to API
 const getShortUrl = async (e) => {
   e.preventDefault();
 
+  let longInputUrl = inputUrl.value;
+
+  inputUrl.value = '';
+
+  longInputUrl = editUrl(longInputUrl);
+
+  const reqBody = {
+    longUrl: longInputUrl,
+  };
+  // if (customId.value !== '') {
+  //   shortId = customId.value;
+  //   reqBody.shortUrl = shortId;
+  // }
   const response = await fetch(serverUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({
-      longUrl: inputUrl.value,
-    }),
+    body: JSON.stringify(reqBody),
   });
-
-  inputUrl.value = '';
 
   const data = await response.json();
 
-  let anchortag = document.createElement('a');
-  let li = document.createElement('li');
-
-  anchortag.innerText = `https://webarch/${data.url.shortUrl}`;
-
-  anchortag.href =
-    data.url.longUrl.startsWith('https') === true
-      ? data.url.longUrl
-      : data.url.longUrl.startsWith('www') === true
-      ? `https://${data.url.longUrl.slice(4)}`
-      : `https://${data.url.longUrl}`;
-
-  li.append(anchortag);
-  urlList.append(li);
+  addUrltoList(serverUrl, longInputUrl, data.url.shortUrl);
 };
 
 formUrl.addEventListener('submit', getShortUrl);
