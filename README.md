@@ -75,8 +75,8 @@ Depending on the size of the project, if it is small and simple enough the refer
 |                                                                                                                                        **[name]()**                                                                                                                                          
 | <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |
 </td>
-</tr></div>
-   </table>
+</tr>
+   </table></div>
    
 ## License
 
