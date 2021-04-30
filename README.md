@@ -51,20 +51,20 @@ Depending on the size of the project, if it is small and simple enough the refer
 ## License
 
 A short snippet describing the license ([MIT](http://opensource.org/licenses/mit-license.php), [Apache](http://opensource.org/licenses/Apache-2.0), etc.)
-<br>
+<br><hr>
 <div align="center">
- <img width="30%" height="50%" src="xd.svg" alt="✨ All Contributors ✨" width="800px" />
-	<br> <hr>
+ <img width="30%" height="50%" src="xd.svg" alt="✨ All Contributors ✨" width="800px" /></div>
+	<br> 
 <table>	<tr>
 
 |                                                                                         <a href=""><img src="" width=150px height=150px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[name]()**                                                                                                                                          
-| <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a><a href=""><img src="Gmail-256.webp" width="32px" height="32px"></a> |
+| <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |
 </tr>
    </table>
    
-</div>
+
 
 </br>
 
