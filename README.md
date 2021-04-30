@@ -61,7 +61,7 @@ A short snippet describing the license ([MIT](http://opensource.org/licenses/mit
 |    <a href=""><img src="" width=150px height=150px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[]()**                                                                                                                                        |
-| <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="" width="32px" height="32px"></a> |
+| <a href=""><img src="linkedin_social_media-256.webp" width="32px" height="32px"></a> <a href=""><img src="linkedin_social_media-256.webp" width="32px" height="32px"></a> <a href=""><img src="" width="32px" height="32px"></a> |
 
    
 </div>
