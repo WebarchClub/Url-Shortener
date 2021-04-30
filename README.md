@@ -1,4 +1,4 @@
-# Project Name
+# Project Name- Web.ly
 
 Short introduction or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 
@@ -30,12 +30,42 @@ A short description of the motivation behind the creation and maintenance of the
 
 ## Installation or Getting Started
 
-Provide code examples and explanations of how to get the project, e.g.,
 
-	git clone https://github.com/Jasonnor/README.md.git
-    cd README.md
-    npm install README.md
-    npm start
+* Clone the repository by running command
+```
+git clone https://github.com/<your user-name>/Web.ly.git
+```
+in your git bash/cli.
+<br/>
+
+* Run command `cd Web.ly`.
+<br/>
+
+* Run this command to install all dependencies for the project.
+```
+npm install
+```
+
+<br/>
+
+
+* Run this command to start the project.
+```
+npm start
+```
+
+* Run this command to start the project as a developer.
+```
+npm run dev
+```
+<br/>
+
+* Open link to view the website in your browser window if it doesn't open automatically.
+```
+http://localhost:5000/
+```
+<br/>
+
 
 ## Usage
 
@@ -47,30 +77,29 @@ Show how to use the project or library.
 + [gistfrojd](https://gist.github.com/gistfrojd) - [README.md](https://gist.github.com/gistfrojd/5fcd3b70949ac6376f66)
 
 Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-
+<br>
 <div align="center">
  <img width="30%" height="50%" src="xd.svg" alt="✨ All Contributors ✨" width="800px" /><hr>
 	<br> 
 <table>	<tr><td>
 
-|                                                                                         <a href=""><img src="" width=150px height=150px /></a>                                                                                         |
+|                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[name]()**                                                                                                                                          
 | <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |</td><td>
 
-|                                                                                         <a href=""><img src="" width=150px height=150px /></a>                                                                                         |
+|                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[name]()**                                                                                                                                          
 | <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |
 </td><td>
 
-|                                                                                         <a href=""><img src="" width=150px height=150px /></a>                                                                                         |
+|                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[name]()**                                                                                                                                          
 | <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |</td><td>
 
-|                                                                                         <a href=""><img src="" width=150px height=150px /></a>                                                                                         |
+|                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[name]()**                                                                                                                                          
 | <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |
