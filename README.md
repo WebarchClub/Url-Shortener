@@ -53,9 +53,17 @@ Depending on the size of the project, if it is small and simple enough the refer
 A short snippet describing the license ([MIT](http://opensource.org/licenses/mit-license.php), [Apache](http://opensource.org/licenses/Apache-2.0), etc.)
 
 <div align="center">
-    <a href="https://allcontributors.org">
-        <img width="30%" height="50%" src="xd.svg" alt="✨ All Contributors ✨" width="800px" />
-    </a>
+ <img width="30%" height="50%" src="xd.svg" alt="✨ All Contributors ✨" width="800px" />
+	
+	
+
+
+|    <a href=""><img src="" width=150px height=150px /></a>                                                                                         |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                                                                        **[]()**                                                                                                                                        |
+| <a href=""><img src="twitter.png" width="32px" height="32px"></a> <a href=""><img src="facebook.png" width="32px" height="32px"></a> <a href=""><img src="linkedin.png" width="32px" height="32px"></a> |
+
+   
 </div>
 
 </br>
