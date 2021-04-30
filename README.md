@@ -48,12 +48,9 @@ Show how to use the project or library.
 
 Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
-## License
 
-A short snippet describing the license ([MIT](http://opensource.org/licenses/mit-license.php), [Apache](http://opensource.org/licenses/Apache-2.0), etc.)
-<br><hr>
 <div align="center">
- <img width="30%" height="50%" src="xd.svg" alt="✨ All Contributors ✨" width="800px" />
+ <img width="30%" height="50%" src="xd.svg" alt="✨ All Contributors ✨" width="800px" /><hr>
 	<br> 
 <table>	<tr><td>
 
@@ -81,7 +78,16 @@ A short snippet describing the license ([MIT](http://opensource.org/licenses/mit
 </tr></div>
    </table>
    
+## License
 
+The MIT License 2021.
+
+<div align="center"> 
+
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)]() &ensp;[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)]() &ensp;[![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)]()
+
+
+</div>
 
 </br>
 
