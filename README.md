@@ -80,7 +80,7 @@ http://localhost:5000/
 </tr>
 </table>
 
-### **<div align="center">Project Maintainers</div>**
+## **<div align="center">Project Maintainers</div>**
 <hr>
 
 <table>
