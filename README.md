@@ -1,4 +1,4 @@
-# Project Name- Web.ly
+# <div align="center">Project: Webarch.ly</div>
 
 
 ## Features:
