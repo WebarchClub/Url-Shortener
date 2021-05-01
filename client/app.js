@@ -2,8 +2,10 @@ const formUrl = document.getElementById('urlForm');
 const inputUrl = document.getElementById('longUrl');
 const customId = document.getElementById('shortId');
 const urlList = document.getElementById('url-list');
+const customIdButton = document.getElementById('custom-btn');
 
-const serverUrl = 'http://localhost:5000/api/v1/shortUrl';
+// This server URL will change on deploy
+let serverUrl = 'http://localhost:5000';
 
 // Helper function to add a URL item to the results
 const addUrltoList = (baseUrl, longUrl, shortUrl) => {
@@ -12,6 +14,8 @@ const addUrltoList = (baseUrl, longUrl, shortUrl) => {
   let longUrlLink = document.createElement('a');
   let div1 = document.createElement('div');
   let div2 = document.createElement('div');
+
+  baseUrl = baseUrl + '/shorten';
 
   shortUrlLink.innerText = `${baseUrl}/${shortUrl}`;
   longUrlLink.innerText = longUrl;
@@ -45,14 +49,14 @@ const editUrl = (inputUrl) => {
 
 // To fetch all the URLs entered by the user before by making a GET request to the API
 const fetchAllShortUrls = async () => {
-  const response = await fetch(serverUrl);
+  // console.log(window.location);
+  const response = await fetch(`${serverUrl}/shorten`);
 
   const data = await response.json();
 
   const urls = data.data;
 
   urlList.innerText = urls.length === 0 ? 'No URLS yet' : '';
-
   urls.forEach((url) => {
     url.longUrl = editUrl(url.longUrl);
     addUrltoList(serverUrl, url.longUrl, url.shortUrl);
@@ -60,7 +64,7 @@ const fetchAllShortUrls = async () => {
 };
 
 // To convert a long URL to a short URL by making a POST request to API
-const getShortUrl = async (e) => {
+const createShortUrl = async (e) => {
   e.preventDefault();
 
   let longInputUrl = inputUrl.value;
@@ -69,14 +73,18 @@ const getShortUrl = async (e) => {
 
   longInputUrl = editUrl(longInputUrl);
 
-  const reqBody = {
+  let reqBody = {
     longUrl: longInputUrl,
   };
-  // if (customId.value !== '') {
-  //   shortId = customId.value;
-  //   reqBody.shortUrl = shortId;
-  // }
-  const response = await fetch(serverUrl, {
+
+  if (customId.value !== null && customId.value !== '') {
+    console.log('hi');
+    shortId = customId.value;
+    reqBody.shortUrl = shortId;
+  }
+
+  customId.value = '';
+  const response = await fetch(`${serverUrl}/shorten`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -89,7 +97,11 @@ const getShortUrl = async (e) => {
   addUrltoList(serverUrl, longInputUrl, data.url.shortUrl);
 };
 
-formUrl.addEventListener('submit', getShortUrl);
+formUrl.addEventListener('submit', createShortUrl);
 document.addEventListener('DOMContentLoaded', function () {
   fetchAllShortUrls();
+});
+customIdButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  customId.classList.remove('inactive');
 });

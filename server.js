@@ -2,6 +2,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const path = require('path');
 
 // Requiring files
 const connectDB = require('./backend/config/db');
@@ -25,7 +26,10 @@ app.use(express.json());
 app.use(cors());
 
 // Mounting the routes
-app.use('/api/v1/shortUrl', urlRoutes);
+app.use('/shorten', urlRoutes);
+
+// Setting static files
+app.use(express.static(path.join(__dirname, 'client')));
 
 const PORT = process.env.PORT || 5000;
 

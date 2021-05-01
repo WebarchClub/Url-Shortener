@@ -7,7 +7,8 @@ const {
   redirectShortUrl,
 } = require('../controllers/urlController');
 
-router.route('/').get(getShortUrls).post(createShortUrl);
+router.get('/', getShortUrls);
+router.post('/', createShortUrl);
 router.get('/:shortid', redirectShortUrl);
 
 module.exports = router;
