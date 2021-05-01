@@ -5,7 +5,7 @@ const urlList = document.getElementById('url-list');
 const customIdButton = document.getElementById('custom-btn');
 
 // This server URL will change on deploy
-let serverUrl = 'http://localhost:5000';
+let serverUrl = 'https://webarch-shortener.herokuapp.com/';
 
 // Helper function to add a URL item to the results
 const addUrltoList = (baseUrl, longUrl, shortUrl) => {
