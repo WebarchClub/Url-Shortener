@@ -40,3 +40,23 @@ exports.createShortUrl = async (req, res) => {
     });
   }
 };
+
+// @desc Get all short URLS
+// @route GET api/v1/shortUrl/:shortid
+// Public
+exports.redirectShortUrl = async (req, res) => {
+  try {
+    const shortid = req.params.shortid;
+
+    const rec = await Url.findOne({ shortUrl: shortid });
+
+    if (!rec) return res.status(404);
+
+    res.redirect(rec.longUrl);
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: `Error message: ${error.message}`,
+    });
+  }
+};
