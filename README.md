@@ -62,23 +62,28 @@ http://localhost:5000/
 	<br> 
 	
 	
-<table>	<tr><td>
+<table>	
+	<tr>
+		<td>
 
 |                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[name]()**                                                                                                                                          
-| <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |</td><td>
+| <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |</td>
+<td>
 
 |                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[name]()**                                                                                                                                          
 | <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |
 </td>
+</tr>
 </table>
 <table>
 <br>
-<div align="center">##Project Maintainers</div>
-	##
+<div align="center">
+## Project Maintainers</div>
+##	
 <td>
 
 |                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
