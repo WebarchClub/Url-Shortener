@@ -1,3 +1,4 @@
 node_modules
-backend/config/config.env
-.env
+npm-debug.log
+.DS_Store
+/*.env
