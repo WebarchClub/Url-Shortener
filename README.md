@@ -60,6 +60,8 @@ http://localhost:5000/
 <div align="center">
  <img width="30%" height="50%" src="xd.svg" alt="✨ All Contributors ✨" width="800px" /><hr>
 	<br> 
+	
+	
 <table>	<tr><td>
 
 |                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
@@ -71,7 +73,10 @@ http://localhost:5000/
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[name]()**                                                                                                                                          
 | <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |
-</td><td>
+</td>
+<br>##
+<div align="center">Project Maintainers</div>
+<td>
 
 |                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -89,7 +94,7 @@ http://localhost:5000/
 ## License:
 
 The MIT License 2021.
-##
+
 <div align="center"> 
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)]() &ensp;[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)]() &ensp;[![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)]()
