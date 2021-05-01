@@ -10,6 +10,7 @@ const UrlSchema = new mongoose.Schema({
     type: String,
     required: true,
     default: shortid.generate,
+    unique: true,
   },
 });
 

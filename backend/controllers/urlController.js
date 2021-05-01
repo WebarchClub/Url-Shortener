@@ -2,7 +2,7 @@ const { response } = require('express');
 const Url = require('../models/Url');
 
 // @desc Get all short URLS
-// @route GET api/v1/shortUrl
+// @route GET /shorten
 // Public
 exports.getShortUrls = async (req, res) => {
   try {
@@ -21,7 +21,7 @@ exports.getShortUrls = async (req, res) => {
 };
 
 // @desc Create a short URL
-// @route POST api/v1/shortUrl
+// @route POST /shorten
 // Public
 exports.createShortUrl = async (req, res) => {
   try {
@@ -42,7 +42,7 @@ exports.createShortUrl = async (req, res) => {
 };
 
 // @desc Get all short URLS
-// @route GET api/v1/shortUrl/:shortid
+// @route GET /shorten/:shortid
 // Public
 exports.redirectShortUrl = async (req, res) => {
   try {

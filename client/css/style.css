@@ -138,6 +138,9 @@ button:hover {
 .main-shortner-btn:active {
   background-color: hsl(180, 66%, 39%);
 }
+.inactive {
+  display: none;
+}
 /* Shortner main body end  */
 
 /* Feature main body start  */
