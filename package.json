@@ -1,0 +1,30 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "This is a URL Shortener for Webarch",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinkman7009/Url-Shortener.git"
+  },
+  "author": "Webarch Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pinkman7009/Url-Shortener/issues"
+  },
+  "homepage": "https://github.com/pinkman7009/Url-Shortener#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.5",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
