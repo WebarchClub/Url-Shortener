@@ -55,7 +55,7 @@ npm run dev
 ```
 http://localhost:5000/
 ```
-##
+
 <br>
 <div align="center">
  <img width="30%" height="50%" src="xd.svg" alt="✨ All Contributors ✨" width="800px" /><hr>
@@ -80,8 +80,9 @@ http://localhost:5000/
 </tr>
 </table>
 
-<div align="center" height="30px" style="bold">Project Maintainers</div>
+### **<div align="center">Project Maintainers</div>**
 ## 
+
 <table>
 <tr>
 <td>
