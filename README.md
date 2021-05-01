@@ -79,11 +79,11 @@ http://localhost:5000/
 </td>
 </tr>
 </table>
-<table>
+<table><tr>
 <br>
-<div align="center">
-## Project Maintainers</div>
-##	
+<div align="center" height="20px">Project Maintainers</div>
+	
+## 	
 <td>
 
 |                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
@@ -97,7 +97,8 @@ http://localhost:5000/
 | <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |
 </td>
 </tr>
-   </table></div>
+   </table>
+   </div>
    
 ## License:
 
