@@ -81,7 +81,7 @@ http://localhost:5000/
 </table>
 
 ## **<div align="center">Project Maintainers</div>**
-<hr>
+
 
 <table>
 <tr>
