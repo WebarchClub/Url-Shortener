@@ -119,7 +119,3 @@ The MIT License 2021.
 </br>
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 8846fba9356480081daeba17c96bd3da7cf4539e
