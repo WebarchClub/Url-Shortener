@@ -3,9 +3,11 @@ const inputUrl = document.getElementById('longUrl');
 const customId = document.getElementById('shortId');
 const urlList = document.getElementById('url-list');
 const customIdButton = document.getElementById('custom-btn');
+const errorBox = document.getElementById('error-box');
 
 // This server URL will change on deploy
 let serverUrl = 'https://webarch-shortener.herokuapp.com';
+// let serverUrl = 'http://localhost:5000';
 
 // Helper function to add a URL item to the results
 const addUrltoList = (baseUrl, longUrl, shortUrl) => {
@@ -32,7 +34,16 @@ const addUrltoList = (baseUrl, longUrl, shortUrl) => {
   li.append(div1);
   li.append(div2);
 
-  urlList.append(li);
+  urlList.prepend(li);
+};
+
+const addErrorBox = (message) => {
+  errorBox.classList.remove('inactive');
+  errorBox.innerText = message;
+};
+
+const removeErrorBox = () => {
+  errorBox.classList.add('inactive');
 };
 
 // Edit input URL as https
@@ -69,32 +80,41 @@ const createShortUrl = async (e) => {
 
   let longInputUrl = inputUrl.value;
 
-  inputUrl.value = '';
+  // check for url validation
+  if (longInputUrl === '') {
+    addErrorBox('Please add a URL, field cannot be empty');
+  } else {
+    // if there is an existing error, remove it
+    if (!errorBox.classList.contains('inactive')) {
+      removeErrorBox();
+    }
 
-  longInputUrl = editUrl(longInputUrl);
+    inputUrl.value = '';
 
-  let reqBody = {
-    longUrl: longInputUrl,
-  };
+    longInputUrl = editUrl(longInputUrl);
 
-  if (customId.value !== null && customId.value !== '') {
-    console.log('hi');
-    shortId = customId.value;
-    reqBody.shortUrl = shortId;
+    let reqBody = {
+      longUrl: longInputUrl,
+    };
+
+    if (customId.value !== null && customId.value !== '') {
+      shortId = customId.value;
+      reqBody.shortUrl = shortId;
+    }
+
+    customId.value = '';
+    const response = await fetch(`${serverUrl}/shorten`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(reqBody),
+    });
+
+    const data = await response.json();
+
+    addUrltoList(serverUrl, longInputUrl, data.url.shortUrl);
   }
-
-  customId.value = '';
-  const response = await fetch(`${serverUrl}/shorten`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(reqBody),
-  });
-
-  const data = await response.json();
-
-  addUrltoList(serverUrl, longInputUrl, data.url.shortUrl);
 };
 
 formUrl.addEventListener('submit', createShortUrl);
