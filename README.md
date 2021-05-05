@@ -2,6 +2,7 @@
 
 **<div align="center">Webarch.ly is a simple tool that helps you deal with long URLs for free, providing you with short, efficient and customizable links at your service.</div>**
 <hr>
+
 ## Tech Stack:
 
 <img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
@@ -59,13 +60,13 @@ http://localhost:5000/
 	<tr>
 		<td>
 
-|                                                                                         <a href=""><img src="client/images/soumik.png" width=120px height=120px /></a>                                                                                         |
+|                                                                                         <img src="client/images/soumik.png" width=120px height=120px />                                                                                        |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[Soumik Chaudhuri](https://github.com/pinkman7009)**                                                                                                                                          
 | <a href="https://www.linkedin.com/in/soumikchaudhuri2000/"><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href="#"><img src="Medium-256.webp" width="32px" height="32px"></a> |</td>
 <td>
 
-|                                                                                         <a href=""><img src="client/images/tanishq.jpg" width=120px height=120px /></a>                                                                                         |
+|                                                                                         <img src="client/images/tanishq.jpg" width=120px height=120px />                                                                                     |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[Tanishq Kumar](https://github.com/tanishq20)**                                                                                                                                          
 | <a href="https://www.linkedin.com/in/tanishq-kumar-b03a52194/"><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href="#"><img src="Medium-256.webp" width="32px" height="32px"></a> |
@@ -81,14 +82,14 @@ http://localhost:5000/
 <tr>
 <td>
 
-|                                                                                         <a href=""><img src="client/images/hritik.jpg" width=120px height=120px /></a>                                                                                         |
+|                                                                                        <img src="client/images/hritik.jpg" width=120px height=120px />                                                                                    |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[Hrithik Saxena](https://github.com/Mercer1410)**                                                                                                                                          
 | <a href="https://www.linkedin.com/in/hrithik-saxena-185027169/"><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href="#"><img src="Medium-256.webp" width="32px" height="32px"></a> |
 </td>
 <td>
 
-|                                                                                         <a href=""><img src="client/images/ananya.png" width=120px height=120px /></a>                                                                                         |
+|                                                                                        <img src="client/images/ananya.png" width=120px height=120px />                                                                                        |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[Ananya Negi](https://github.com/AnanyaNegi)**                                                                                                                                          
 | <a href="https://www.linkedin.com/in/ananya-negi-42922018a/"><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href="https://medium.com/@ananya4negi"><img src="Medium-256.webp" width="32px" height="32px"></a> |
