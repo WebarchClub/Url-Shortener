@@ -9,9 +9,7 @@ const connectDB = require('./backend/config/db');
 const urlRoutes = require('./backend/routes/urlRoutes');
 
 // Loading env variables
-dotenv.config({
-  path: './backend/config/config.env',
-});
+dotenv.config();
 
 // Connecting to database
 connectDB();

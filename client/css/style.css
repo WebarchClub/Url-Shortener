@@ -138,11 +138,26 @@ button:hover {
 .main-shortner-btn:active {
   background-color: hsl(180, 66%, 39%);
 }
+
+/* Shortner main body end  */
+
+/* error box */
+.error-box {
+  background: white;
+  height: 100px;
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 2px solid red;
+}
 .inactive {
   display: none;
 }
-/* Shortner main body end  */
-
 /* Feature main body start  */
 .feature-info {
   margin: 0 auto 100px auto;
@@ -340,6 +355,9 @@ footer span a:hover {
     margin: 10px 0;
     height: 60px;
     font-size: 20px;
+  }
+  .error-box {
+    width: 100%;
   }
   .feature-info {
     width: 90%;

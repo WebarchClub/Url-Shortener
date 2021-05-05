@@ -1,4 +1,4 @@
-# Project Name- Web.ly
+# <div align="center">Project: Webarch.ly</div>
 
 
 ## Features:
@@ -117,6 +117,5 @@ The MIT License 2021.
 </div>
 
 </br>
-
 
 
