@@ -1,14 +1,7 @@
 # <div align="center">Project: Webarch.ly</div>
 
-
-## Features:
-
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
-
-## Motivation:
-
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
-
+**<div align="center">Webarch.ly is a simple tool that helps you deal with long URLs for free, providing you with short, efficient and customizable links at your service.</div>**
+<hr>
 ## Tech Stack:
 
 <img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
@@ -66,16 +59,16 @@ http://localhost:5000/
 	<tr>
 		<td>
 
-|                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
+|                                                                                         <a href=""><img src="client/images/soumik.png" width=120px height=120px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                                                                        **[name]()**                                                                                                                                          
-| <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |</td>
+|                                                                                                                                        **[Soumik Chaudhuri](https://github.com/pinkman7009)**                                                                                                                                          
+| <a href="https://www.linkedin.com/in/soumikchaudhuri2000/"><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href="#"><img src="Medium-256.webp" width="32px" height="32px"></a> |</td>
 <td>
 
-|                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
+|                                                                                         <a href=""><img src="client/images/tanishq.jpg" width=120px height=120px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                                                                        **[name]()**                                                                                                                                          
-| <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |
+|                                                                                                                                        **[Tanishq Kumar](https://github.com/tanishq20)**                                                                                                                                          
+| <a href="https://www.linkedin.com/in/tanishq-kumar-b03a52194/"><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href="#"><img src="Medium-256.webp" width="32px" height="32px"></a> |
 </td>
 </tr>
 </table>
@@ -88,17 +81,17 @@ http://localhost:5000/
 <tr>
 <td>
 
-|                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
+|                                                                                         <a href=""><img src="client/images/hritik.jpg" width=120px height=120px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                                                                        **[name]()**                                                                                                                                          
-| <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |
+|                                                                                                                                        **[Hrithik Saxena](https://github.com/Mercer1410)**                                                                                                                                          
+| <a href="https://www.linkedin.com/in/hrithik-saxena-185027169/"><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href="#"><img src="Medium-256.webp" width="32px" height="32px"></a> |
 </td>
 <td>
 
-|                                                                                         <a href=""><img src="" width=120px height=120px /></a>                                                                                         |
+|                                                                                         <a href=""><img src="client/images/ananya.png" width=120px height=120px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                                                                        **[name]()**                                                                                                                                          
-| <a href=""><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href=""><img src="Medium-256.webp" width="32px" height="32px"></a> |
+|                                                                                                                                        **[Ananya Negi](https://github.com/AnanyaNegi)**                                                                                                                                          
+| <a href="https://www.linkedin.com/in/ananya-negi-42922018a/"><img src="Linkedin-256.webp" width="32px" height="32px"></a> <a href="https://medium.com/@ananya4negi"><img src="Medium-256.webp" width="32px" height="32px"></a> |
 </td>
 </tr>
    </table>
