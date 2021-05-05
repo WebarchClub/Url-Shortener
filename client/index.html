@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
   </head>
 
   <body>
@@ -56,6 +57,8 @@
 
     <!-- Main page start  -->
     <div id="shortener" class="main-container">
+      <div id="error-box" class="error-box inactive">Some error occured</div>
+
       <form action="" id="urlForm">
         <div class="main-shortner">
           <div class="main-shortner-top-row">
@@ -84,7 +87,7 @@
         </div>
       </form>
 
-      <ul id="url-list"></ul>
+      <ul id="url-list" class="style-6"></ul>
 
       <div class="feature-info">
         <h1>Features of our Product</h1>
