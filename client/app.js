@@ -4,6 +4,7 @@ const customId = document.getElementById('shortId');
 const urlList = document.getElementById('url-list');
 const customIdButton = document.getElementById('custom-btn');
 const errorBox = document.getElementById('error-box');
+const links = document.getElementsByTagName('a');
 
 // This server URL will change on deploy
 // let serverUrl = 'https://webarch-shortener.herokuapp.com';
@@ -61,13 +62,14 @@ const editUrl = (inputUrl) => {
 // To fetch all the URLs entered by the user before by making a GET request to the API
 const fetchAllShortUrls = async () => {
   // console.log(window.location);
+
   const response = await fetch(`${serverUrl}/shorten`);
 
   const data = await response.json();
 
   const urls = data.data;
 
-  urlList.innerText = urls.length === 0 ? 'No URLS yet' : '';
+  urlList.innerText = urls.length === 0 ? 'No URLs yet' : '';
   urls.forEach((url) => {
     url.longUrl = editUrl(url.longUrl);
     addUrltoList(serverUrl, url.longUrl, url.shortUrl);
@@ -77,6 +79,11 @@ const fetchAllShortUrls = async () => {
 // To convert a long URL to a short URL by making a POST request to API
 const createShortUrl = async (e) => {
   e.preventDefault();
+
+  // to empty the list text 'No URLs yet' after a new URL is added
+  if (urlList.innerText === 'No URLs yet') {
+    urlList.innerText = '';
+  }
 
   let longInputUrl = inputUrl.value;
 
@@ -123,5 +130,30 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 customIdButton.addEventListener('click', (e) => {
   e.preventDefault();
-  customId.classList.remove('inactive');
+  if (customId.classList.contains('inactive')) {
+    customId.classList.remove('inactive');
+    customIdButton.innerText = 'Hide alias input';
+  } else {
+    customId.classList.add('inactive');
+    customId.value = '';
+    customIdButton.innerText = 'Make custom alias';
+  }
+});
+
+// To remove the #section-id from url
+Array.prototype.forEach.call(links, function (elem, index) {
+  //Get the hyperlink target and if it refers to an id go inside condition
+  const elemAttr = elem.getAttribute('href');
+  if (elemAttr && elemAttr.includes('#')) {
+    //Replace the regular action with a scrolling to target on click
+    elem.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      //Scroll to the target element using replace() and regex to find the href's target id
+      document.getElementById(elemAttr.replace(/#/g, '')).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest',
+      });
+    });
+  }
 });
