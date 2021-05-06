@@ -5,6 +5,10 @@ const urlList = document.getElementById('url-list');
 const customIdButton = document.getElementById('custom-btn');
 const errorBox = document.getElementById('error-box');
 const links = document.getElementsByTagName('a');
+const modalClose = document.getElementById('modal-close-button');
+const modalBox = document.getElementById('modal-box');
+const modalShortUrl = document.getElementById('modal-short-url');
+const copyBtn = document.getElementById('copy-button');
 
 // This server URL will change on deploy
 // let serverUrl = 'https://webarch-shortener.herokuapp.com';
@@ -21,6 +25,7 @@ const addUrltoList = (baseUrl, longUrl, shortUrl) => {
   baseUrl = baseUrl + '/shorten';
 
   shortUrlLink.innerText = `${baseUrl}/${shortUrl}`;
+  modalShortUrl.value = `${baseUrl}/${shortUrl}`;
   longUrlLink.innerText = longUrl;
   shortUrlLink.href = longUrl;
   longUrlLink.href = longUrl;
@@ -96,6 +101,10 @@ const createShortUrl = async (e) => {
       removeErrorBox();
     }
 
+    if (modalBox.classList.contains('inactive')) {
+      modalBox.classList.remove('inactive');
+    }
+
     inputUrl.value = '';
 
     longInputUrl = editUrl(longInputUrl);
@@ -124,22 +133,6 @@ const createShortUrl = async (e) => {
   }
 };
 
-formUrl.addEventListener('submit', createShortUrl);
-document.addEventListener('DOMContentLoaded', function () {
-  fetchAllShortUrls();
-});
-customIdButton.addEventListener('click', (e) => {
-  e.preventDefault();
-  if (customId.classList.contains('inactive')) {
-    customId.classList.remove('inactive');
-    customIdButton.innerText = 'Hide alias input';
-  } else {
-    customId.classList.add('inactive');
-    customId.value = '';
-    customIdButton.innerText = 'Make custom alias';
-  }
-});
-
 // To remove the #section-id from url
 Array.prototype.forEach.call(links, function (elem, index) {
   //Get the hyperlink target and if it refers to an id go inside condition
@@ -156,4 +149,33 @@ Array.prototype.forEach.call(links, function (elem, index) {
       });
     });
   }
+});
+
+// Event Listeners
+formUrl.addEventListener('submit', createShortUrl);
+document.addEventListener('DOMContentLoaded', function () {
+  fetchAllShortUrls();
+});
+customIdButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (customId.classList.contains('inactive')) {
+    customId.classList.remove('inactive');
+    customIdButton.innerText = 'Hide alias input';
+  } else {
+    customId.classList.add('inactive');
+    customId.value = '';
+    customIdButton.innerText = 'Make custom alias';
+  }
+});
+modalClose.addEventListener('click', function () {
+  if (!modalBox.classList.contains('inactive')) {
+    modalBox.classList.add('inactive');
+  }
+  copyBtn.innerText = 'Copy';
+});
+copyBtn.addEventListener('click', function () {
+  modalShortUrl.select();
+  modalShortUrl.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+  copyBtn.innerText = 'Copied';
 });

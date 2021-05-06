@@ -20,7 +20,7 @@
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
   </head>
 
-  <body>
+  <body class="style-6">
     <section id="landingpage">
       <!-- navbar start  -->
       <nav class="nav">
@@ -87,6 +87,21 @@
         </div>
       </form>
 
+      <!-- modal start  -->
+      <div class="modal-container inactive" id="modal-box">
+        <div class="modals">
+          <div class="modaldetails">
+            <h1 class="modaltitle">Short URL</h1>
+            <input type="text" id="modal-short-url" class="modaldescription" />
+            <button id="copy-button" class="modalbtn">
+              Copy <i class="fas fa-link"></i>
+            </button>
+            <button id="modal-close-button" class="link-2"></button>
+          </div>
+        </div>
+      </div>
+      <!-- modal end  -->
+
       <ul id="url-list" class="style-6"></ul>
 
       <div class="feature-info">
@@ -147,6 +162,10 @@
       >
     </footer>
     <!-- Footer end  -->
+    <script
+      src="https://kit.fontawesome.com/a507955c58.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./app.js"></script>
   </body>
 </html>
