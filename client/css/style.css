@@ -140,6 +140,136 @@ button:hover {
   background-color: hsl(180, 66%, 39%);
 }
 
+/* modal Start*/
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 40%, 0.6);
+  --light: hsl(0, 0%, 100%);
+  --background: linear-gradient(
+    to right bottom,
+    hsl(180, 66%, 49%),
+    hsl(195, 50%, 50%)
+  );
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans',
+    sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container:target {
+  display: flex;
+}
+
+.modals {
+  width: 60rem;
+  padding: 3rem 1rem;
+  border-radius: 1.8rem;
+  color: var(--light);
+  background: var(--background);
+  box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem hsl(236deg 50% 50% / 30%);
+  position: relative;
+  overflow: hidden;
+  height: 320px;
+  margin: 0 1rem;
+}
+
+.modaldetails {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.modaltitle {
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+
+.modaldescription {
+  margin-top: 1rem;
+
+  font-size: 1.3rem;
+  font-style: italic;
+  background: transparent;
+  border: none;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+.modaldescription::selection {
+  background: transparent;
+}
+.modaldescription:focus {
+  outline: none;
+}
+
+.modalbtn {
+  padding: 1rem 1.6rem;
+  border: 2px solid hsla(0, 0%, 100%, 0.4);
+  border-radius: 100rem;
+
+  color: inherit;
+  background: transparent;
+  font-size: 1rem;
+  font-family: inherit;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.modalbtn:hover,
+.modalbtn:focus {
+  border-color: hsla(0, 0%, 100%, 0.6);
+  transform: translateY(-0.2rem);
+}
+
+.link-2 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid hsla(0, 0%, 100%, 0.4);
+  border-radius: 50%;
+  text-decoration: none;
+  color: inherit;
+  font-size: 2.2rem;
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.2s;
+}
+
+.link-2::before {
+  content: '×';
+
+  /* transform: translateY(-0.1rem); */
+}
+
+.link-2:hover,
+.link-2:focus {
+  border-color: hsla(0, 0%, 100%, 0.6);
+  /* transform: translateY(-0.2rem); */
+}
+
+/* Modal End  */
+
 /* Shortner main body end  */
 
 /* error box */
@@ -157,9 +287,7 @@ button:hover {
   font-size: 1.2rem;
   border-radius: 20px;
 }
-.inactive {
-  display: none;
-}
+
 /* Feature main body start  */
 .feature-info {
   margin: 0 auto 100px auto;
@@ -323,6 +451,10 @@ footer span a:hover {
 }
 /* Footer end  */
 
+.inactive {
+  display: none;
+}
+
 /* Media Start */
 @media screen and (max-width: 767px) {
   .content-left {
@@ -392,6 +524,12 @@ footer span a:hover {
   }
   .feature-info {
     width: 90%;
+  }
+  .modaltitle {
+    font-size: 2rem;
+  }
+  .modaldescription {
+    font-size: 1.2rem;
   }
   .main-features {
     display: flex;
