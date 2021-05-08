@@ -24,9 +24,22 @@ const addUrltoList = (baseUrl, longUrl, shortUrl) => {
 
   baseUrl = baseUrl + '/shorten';
 
+  let shortenedLongUrl;
+
+  if (longUrl.length > 30) {
+    shortenedLongUrl = `${longUrl.slice(0, 30)}.....`;
+    const hoverDiv = document.createElement('div');
+    hoverDiv.innerText = longUrl;
+    hoverDiv.classList.add('hover-div');
+    div1.append(hoverDiv);
+    div1.classList.add('activate-hover');
+  } else {
+    shortenedLongUrl = longUrl;
+  }
+
   shortUrlLink.innerText = `${baseUrl}/${shortUrl}`;
-  modalShortUrl.value = `${baseUrl}/${shortUrl}`;
-  longUrlLink.innerText = longUrl;
+  modalShortUrl.innerText = `${baseUrl}/${shortUrl}`;
+  longUrlLink.innerText = shortenedLongUrl;
   shortUrlLink.href = longUrl;
   longUrlLink.href = longUrl;
   shortUrlLink.target = '_blank';
@@ -174,8 +187,11 @@ modalClose.addEventListener('click', function () {
   copyBtn.innerText = 'Copy';
 });
 copyBtn.addEventListener('click', function () {
-  modalShortUrl.select();
-  modalShortUrl.setSelectionRange(0, 99999);
+  const r = document.createRange();
+  r.selectNode(modalShortUrl);
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
   document.execCommand('copy');
+  window.getSelection().removeAllRanges();
   copyBtn.innerText = 'Copied';
 });
