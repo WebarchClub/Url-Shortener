@@ -288,7 +288,7 @@ button:hover {
 }
 
 /* Hover div for long url */
-.hover-div {
+/* .hover-div {
   background: grey;
   font-size: 0.7rem;
   min-height: 30px;
@@ -298,15 +298,16 @@ button:hover {
   display: none;
   /* visibility: hidden;
   opacity: 0; */
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
+/* border-radius: 10px; */
+/* transition: all 0.3s ease; */
+/* } */
+/* 
 .activate-hover:hover .hover-div {
-  display: block;
-  /* visibility: visible;
+  display: block; */
+/* visibility: visible;
   opacity: 1; */
-}
+/* } */
+
 /* Feature main body start  */
 .feature-info {
   margin: 0 auto 100px auto;

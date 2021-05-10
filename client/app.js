@@ -28,11 +28,6 @@ const addUrltoList = (baseUrl, longUrl, shortUrl) => {
 
   if (longUrl.length > 30) {
     shortenedLongUrl = `${longUrl.slice(0, 30)}.....`;
-    const hoverDiv = document.createElement('div');
-    hoverDiv.innerText = longUrl;
-    hoverDiv.classList.add('hover-div');
-    div1.append(hoverDiv);
-    div1.classList.add('activate-hover');
   } else {
     shortenedLongUrl = longUrl;
   }
@@ -85,9 +80,13 @@ const fetchAllShortUrls = async () => {
 
   const data = await response.json();
 
-  const urls = data.data;
+  let urls = data.data;
 
   urlList.innerText = urls.length === 0 ? 'No URLs yet' : '';
+
+  //  To get only the last 10 newly added URLs
+  urls = urls.slice(Math.max(urls.length - 10, 0));
+
   urls.forEach((url) => {
     url.longUrl = editUrl(url.longUrl);
     addUrltoList(serverUrl, url.longUrl, url.shortUrl);
