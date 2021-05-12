@@ -182,6 +182,7 @@ customIdButton.addEventListener('click', (e) => {
 modalClose.addEventListener('click', function () {
   if (!modalBox.classList.contains('inactive')) {
     modalBox.classList.add('inactive');
+    modalShortUrl.innerText = '';
   }
   copyBtn.innerText = 'Copy';
 });
