@@ -11,8 +11,8 @@ const modalShortUrl = document.getElementById('modal-short-url');
 const copyBtn = document.getElementById('copy-button');
 
 // This server URL will change on deploy
-// let serverUrl = 'https://webarch-shortener.herokuapp.com';
-let serverUrl = 'http://localhost:5000';
+let serverUrl = 'https://webarch-shortener.herokuapp.com';
+// let serverUrl = 'http://localhost:5000';
 
 // Helper function to add a URL item to the results
 const addUrltoList = (baseUrl, longUrl, shortUrl) => {
