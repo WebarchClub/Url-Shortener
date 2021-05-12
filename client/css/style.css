@@ -14,7 +14,9 @@
 
   --contianer-margin: 10%;
 }
-
+body {
+  overflow-x: hidden;
+}
 /* nav start  */
 .nav {
   padding: 1rem;
@@ -28,6 +30,29 @@
 
 /* content start  */
 
+.content-left {
+  animation: reveal-left 0.8s;
+}
+.right-image {
+  animation: reveal-right 0.8s;
+}
+
+@keyframes reveal-left {
+  from {
+    transform: translate(-1500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+@keyframes reveal-right {
+  from {
+    transform: translate(1500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
 .content-left h1 {
   font-size: 60px;
   line-height: 1.18;
@@ -110,6 +135,9 @@ button:hover {
   -o-border-radius: 7px;
   border: none;
 }
+#shortId {
+  animation: reveal-modal 0.4s;
+}
 .shorturl-input {
   width: 50%;
   margin: 0 auto;
@@ -181,8 +209,17 @@ button:hover {
   overflow: hidden;
   height: 320px;
   margin: 0 1rem;
+  animation: reveal-modal 0.3s;
 }
 
+@keyframes reveal-modal {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 .modaldetails {
   text-align: center;
   display: flex;
@@ -285,6 +322,7 @@ button:hover {
   padding: 1rem;
   font-size: 1.2rem;
   border-radius: 20px;
+  animation: reveal-modal 0.2s;
 }
 
 /* Hover div for long url */
@@ -477,6 +515,16 @@ footer span a:hover {
 
 .inactive {
   display: none;
+  animation: remove-modal 0.4s;
+}
+
+@keyframes remove-modal {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
 }
 
 /* Media Start */
