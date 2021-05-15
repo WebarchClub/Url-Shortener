@@ -12,6 +12,11 @@ const UrlSchema = new mongoose.Schema({
     default: shortid.generate,
     unique: true,
   },
+  isPrivate: {
+    type: Boolean,
+    required: true,
+    default: false,
+  },
 });
 
 module.exports = mongoose.model('Url', UrlSchema);

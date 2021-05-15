@@ -9,10 +9,11 @@ const modalClose = document.getElementById('modal-close-button');
 const modalBox = document.getElementById('modal-box');
 const modalShortUrl = document.getElementById('modal-short-url');
 const copyBtn = document.getElementById('copy-button');
+const urlCheckbox = document.getElementById('url-checkbox');
 
 // This server URL will change on deploy
-let serverUrl = 'https://webarch-shortener.herokuapp.com';
-// let serverUrl = 'http://localhost:5000';
+// let serverUrl = 'https://webarch-shortener.herokuapp.com';
+let serverUrl = 'http://localhost:5000';
 
 // Helper function to add a URL item to the results
 const addUrltoList = (baseUrl, longUrl, shortUrl) => {
@@ -60,6 +61,22 @@ const removeErrorBox = () => {
   errorBox.classList.add('inactive');
 };
 
+const addHeadingsToList = () => {
+  const li = document.createElement('li');
+  const h1 = document.createElement('h3');
+  const h2 = document.createElement('h3');
+
+  h1.innerText = `Long URLs`;
+  h2.innerText = `Short URLs`;
+
+  li.append(h1);
+  li.append(h2);
+  li.classList.add('url-list-item');
+  li.id = 'url-heading';
+
+  urlList.prepend(li);
+};
+
 // Edit input URL as https
 const editUrl = (inputUrl) => {
   inputUrl =
@@ -91,6 +108,9 @@ const fetchAllShortUrls = async () => {
     url.longUrl = editUrl(url.longUrl);
     addUrltoList(serverUrl, url.longUrl, url.shortUrl);
   });
+
+  // add the headings dynamically
+  addHeadingsToList();
 };
 
 // To convert a long URL to a short URL by making a POST request to API
@@ -98,9 +118,6 @@ const createShortUrl = async (e) => {
   e.preventDefault();
 
   // to empty the list text 'No URLs yet' after a new URL is added
-  if (urlList.innerText === 'No URLs yet') {
-    urlList.innerText = '';
-  }
 
   let longInputUrl = inputUrl.value;
 
@@ -117,6 +134,15 @@ const createShortUrl = async (e) => {
       modalBox.classList.remove('inactive');
     }
 
+    console.log(urlList.innerText);
+
+    if (urlList.innerText.includes('No URLs yet')) {
+      urlList.innerText = '';
+    } else {
+      const urlHeading = document.getElementById('url-heading');
+      if (urlHeading !== null) urlHeading.remove();
+    }
+
     inputUrl.value = '';
 
     longInputUrl = editUrl(longInputUrl);
@@ -130,6 +156,11 @@ const createShortUrl = async (e) => {
       reqBody.shortUrl = shortId;
     }
 
+    // check the state of the make private checkbox
+    const isChecked = urlCheckbox.checked === true ? true : false;
+
+    reqBody.isPrivate = isChecked;
+
     customId.value = '';
     const response = await fetch(`${serverUrl}/shorten`, {
       method: 'POST',
@@ -141,7 +172,16 @@ const createShortUrl = async (e) => {
 
     const data = await response.json();
 
-    addUrltoList(serverUrl, longInputUrl, data.url.shortUrl);
+    // if checkbox is checked then no need to add it to the URL list
+    if (urlCheckbox.checked === false) {
+      addUrltoList(serverUrl, longInputUrl, data.url.shortUrl);
+    } else {
+      // just add the private url to the modal and not the list
+      modalShortUrl.innerText = `${serverUrl}/shorten/${data.url.shortUrl}`;
+    }
+
+    // add the headings dynamically
+    addHeadingsToList();
   }
 };
 
