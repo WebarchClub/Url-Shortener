@@ -6,7 +6,7 @@ const Url = require('../models/Url');
 // Public
 exports.getShortUrls = async (req, res) => {
   try {
-    const shortUrls = await Url.find();
+    const shortUrls = await Url.find({ isPrivate: false });
 
     res.status(200).json({
       success: true,

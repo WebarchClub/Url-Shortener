@@ -103,7 +103,7 @@ button:hover {
   padding: 45px 20px 20px 20px;
   padding-bottom: 20px;
   min-height: 150px;
-  width: 80%;
+  width: 100%;
   background-color: var(--dark-violet);
   background-image: url('../images/bg-shorten-desktop.svg');
   background-repeat: no-repeat;
@@ -120,7 +120,7 @@ button:hover {
   width: 100%;
 }
 .main-shortner-input-container {
-  width: 65%;
+  width: 55%;
 }
 .main-shortner-input {
   width: 100%;
@@ -166,6 +166,19 @@ button:hover {
 }
 .main-shortner-btn:active {
   background-color: hsl(180, 66%, 39%);
+}
+.checkbox-container {
+  height: 50px;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 12%;
+  background: var(--cyan);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 /* modal Start*/
@@ -433,6 +446,15 @@ button:hover {
   border-radius: 10px;
   background: var(--white);
   margin: 2rem 0;
+  /* position: relative; */
+  /* padding-top: 0px; */
+}
+#url-heading {
+  /* position: sticky; */
+  /* top: 0; */
+  color: #000;
+  background: var(--cyan);
+  /* z-index: 10; */
 }
 .url-list-item {
   width: 100%;
@@ -572,6 +594,13 @@ footer span a:hover {
   }
   .main-shortner-top-row {
     flex-direction: column;
+  }
+  #url-heading {
+    display: none;
+  }
+  .checkbox-container {
+    width: 60%;
+    margin: 10px auto;
   }
   .shorturl-input {
     width: 100%;
