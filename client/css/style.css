@@ -57,14 +57,14 @@ body {
   font-size: 60px;
   line-height: 1.18;
   color: var(--very-dark-violet);
-  font-family: 'Oldenburg', cursive;
+  font-family: "Oldenburg", cursive;
 }
 .content-left p {
   line-height: 1.7;
   font-size: 25px;
   color: #535353;
   /* font-family: 'Oldenburg', cursive; */
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .content-left button {
   height: 45px;
@@ -105,7 +105,7 @@ button:hover {
   min-height: 150px;
   width: 100%;
   background-color: var(--dark-violet);
-  background-image: url('../images/bg-shorten-desktop.svg');
+  background-image: url("../images/bg-shorten-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 10px;
@@ -199,7 +199,7 @@ button:hover {
     hsl(180, 66%, 49%),
     hsl(195, 50%, 50%)
   );
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Open Sans",
     sans-serif;
   min-height: 100vh;
   display: flex;
@@ -224,6 +224,10 @@ button:hover {
   margin: 0 1rem;
   animation: reveal-modal 0.3s;
 }
+
+/* .hidden-item {
+  display: none;
+} */
 
 @keyframes reveal-modal {
   from {
@@ -284,7 +288,26 @@ button:hover {
   border-color: hsla(0, 0%, 100%, 0.6);
   transform: translateY(-0.2rem);
 }
+.copy-btn {
+  padding: 1rem 1.6rem;
+  border: 2px solid hsla(0, 0%, 100%, 0.4);
+  border-radius: 100rem;
 
+  color: #fff;
+  margin-left: 1rem;
+  background: var(--cyan);
+  font-size: 0.7rem;
+  font-family: inherit;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  transition: 0.2s;
+  cursor: pointer;
+  height: 30px;
+  min-width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .link-2 {
   width: 2.5rem;
   height: 2.5rem;
@@ -306,7 +329,7 @@ button:hover {
 }
 
 .link-2::before {
-  content: '×';
+  content: "×";
 
   /* transform: translateY(-0.1rem); */
 }
@@ -450,11 +473,14 @@ button:hover {
   /* padding-top: 0px; */
 }
 #url-heading {
-  /* position: sticky; */
-  /* top: 0; */
   color: #000;
-  background: var(--cyan);
-  /* z-index: 10; */
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Poppins, "sans-serif";
+  font-weight: normal;
 }
 .url-list-item {
   width: 100%;
@@ -549,6 +575,87 @@ footer span a:hover {
   }
 }
 
+.toggle {
+  align-items: center;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.toggle:last-of-type {
+  margin: 0;
+}
+
+.toggle__input {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.toggle__input:not([disabled]):active + .toggle-track,
+.toggle__input:not([disabled]):focus + .toggle-track {
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 0px 2px #121943;
+}
+.toggle__input:disabled + .toggle-track {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.toggle-track {
+  background: #e5efe9;
+  border: 1px solid #5a72b5;
+  border-radius: 100px;
+  cursor: pointer;
+  display: flex;
+  height: 15px;
+  margin-right: 12px;
+  position: relative;
+  width: 30px;
+}
+
+.toggle-indicator {
+  align-items: center;
+  background: #121943;
+  border-radius: 7px;
+  bottom: 1px;
+  display: flex;
+  height: 11px;
+  justify-content: center;
+  left: 1px;
+  outline: solid 2px transparent;
+  position: absolute;
+  transition: 0.25s;
+  width: 11px;
+}
+
+.checkMark {
+  fill: #fff;
+  height: 28px;
+  width: 21px;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.toggle__input:checked + .toggle-track .toggle-indicator {
+  background: #121943;
+  transform: translateX(16px);
+}
+.toggle__input:checked + .toggle-track .toggle-indicator .checkMark {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .toggle-track {
+    border-radius: 0;
+  }
+}
+
 /* Media Start */
 @media screen and (max-width: 767px) {
   .content-left {
@@ -567,7 +674,7 @@ footer span a:hover {
 
   .content-left h1 {
     font-size: 40px;
-    font-family: 'Oldenburg', cursive;
+    font-family: "Oldenburg", cursive;
   }
   .content-left p {
     font-size: 17px;
@@ -577,7 +684,7 @@ footer span a:hover {
 @media (min-width: 769px) and (max-width: 992px) {
   .content-left h1 {
     font-size: 50px;
-    font-family: 'Oldenburg', cursive;
+    font-family: "Oldenburg", cursive;
   }
 }
 
@@ -586,7 +693,7 @@ footer span a:hover {
     top: -100px;
     display: flex;
     flex-direction: column;
-    background-image: url('../images/bg-shorten-mobile.svg');
+    background-image: url("../images/bg-shorten-mobile.svg");
     background-repeat: no-repeat;
     background-size: 75%;
     background-position: top right;
